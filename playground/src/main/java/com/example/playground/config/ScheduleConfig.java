@@ -3,7 +3,7 @@ package com.example.playground.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@EnableScheduling
+//@EnableScheduling
 @Configuration
 public class ScheduleConfig {
 }

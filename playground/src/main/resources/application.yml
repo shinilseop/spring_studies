@@ -13,6 +13,13 @@ spring:
         show_sql: true
         format_sql: true
 
+  quartz:
+    scheduler-name: "MyQuartzScheduler"
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+    overwrite-existing-jobs: true
+
 cloud:
   aws:
     region:

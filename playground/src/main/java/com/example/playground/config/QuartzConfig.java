@@ -26,10 +26,10 @@ public class QuartzConfig {
 
   @PostConstruct
   public void scheduled() throws SchedulerException {
-    JobDataMap jobDataMap1 = new JobDataMap(Collections.singletonMap("num", 1));
-    JobDetail job1 = jobDetail("hello1", "hello-group", "This is JobDetail 1.", jobDataMap1);
-    SimpleTrigger trigger1 = trigger("trigger1", "trigger-group", "This is SimpleTrigger 1.");
-    schedulerFactoryBean.getObject().scheduleJob(job1, trigger1);
+//    JobDataMap jobDataMap1 = new JobDataMap(Collections.singletonMap("num", 1));
+//    JobDetail job1 = jobDetail("hello1", "hello-group", "This is JobDetail 1.", jobDataMap1);
+//    SimpleTrigger trigger1 = trigger("trigger1", "trigger-group", "This is SimpleTrigger 1.");
+//    schedulerFactoryBean.getObject().scheduleJob(job1, trigger1);
 
 //    JobDataMap jobDataMap2 = new JobDataMap(Collections.singletonMap("num", 2));
 //    JobDetail job2 = jobDetail("hello2", "hello-group", "This is JobDetail 2.", jobDataMap2);

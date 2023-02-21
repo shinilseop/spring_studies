@@ -17,6 +17,10 @@ public class AutowiredTest {
 
     static class TestBean {
 
+        /**
+         * Member는 스프링 빈이 아니기에 주입을 해줄 수 없어서 에러가 난다.
+         * 이를 방지하기 위해서는 파라미터에 Nullable이나 Optional을 통해서 빈값이 가능하도록 해야한다.
+         */
         @Autowired(required = false)
         public void setNoBean1(Member isNotBean) {
             System.out.println("setNoBean1 = " +isNotBean);

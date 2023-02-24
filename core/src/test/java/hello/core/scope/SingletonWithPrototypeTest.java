@@ -2,6 +2,7 @@ package hello.core.scope;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
@@ -40,9 +41,11 @@ public class SingletonWithPrototypeTest {
     static class ClientBean {
 
         private final ObjectProvider<PrototypeBean> prototypeBeanObjectProvider;
+        private final ObjectFactory<PrototypeBean> prototypeBeanObjectFactory;
 
-        public ClientBean(ObjectProvider<PrototypeBean> prototypeBeanObjectProvider) {
+        public ClientBean(ObjectProvider<PrototypeBean> prototypeBeanObjectProvider, ObjectFactory<PrototypeBean> prototypeBeanObjectFactory) {
             this.prototypeBeanObjectProvider = prototypeBeanObjectProvider;
+            this.prototypeBeanObjectFactory = prototypeBeanObjectFactory;
         }
 
         public int logic() {

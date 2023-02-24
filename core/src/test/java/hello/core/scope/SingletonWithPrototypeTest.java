@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Scope;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class SingletonWithPrototypeTest1 {
+public class SingletonWithPrototypeTest {
 
     @Test
     void prototypeFind() {
